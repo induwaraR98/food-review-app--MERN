@@ -11,7 +11,17 @@ const foodSchema = new mongoose.Schema({
   price: {
     type: Number,
     required: true
-  }
+  },
+  rating: {
+    type: Number,
+    required: true,
+    min: 1,
+    max: 5
+  },
+  review: {
+    type: String,
+    required: true
+  },
   
 });
 

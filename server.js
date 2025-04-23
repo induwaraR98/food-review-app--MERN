@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const foodRoutes = require('./routes/foodRoutes');
 const ratingsRoutes = require('./routes/ratingsRoutes');
+const hotelReviewRoutes = require('./routes/hotelReviewRoutes');
 
 
 const app = express();
@@ -15,6 +16,7 @@ app.use(express.json());
 // Routes
 app.use('/api/foods', foodRoutes);
 app.use('/api/ratings', ratingsRoutes);
+app.use('/api/hotelReviews', hotelReviewRoutes);
 
 
 
