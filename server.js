@@ -2,9 +2,10 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const foodRoutes = require('./routes/foodRoutes');
-const ratingsRoutes = require('./routes/ratingsRoutes');
-const hotelReviewRoutes = require('./routes/hotelReviewRoutes');
+
+
+const resturantReviewRoutes = require('./routes/resturantRoute');
+const driverReviewRoutes = require('./routes/driverRoute');
 
 
 const app = express();
@@ -14,9 +15,10 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
-app.use('/api/foods', foodRoutes);
-app.use('/api/ratings', ratingsRoutes);
-app.use('/api/hotelReviews', hotelReviewRoutes);
+app.use('/api/review', resturantReviewRoutes);
+app.use('/api/driver', driverReviewRoutes);
+
+
 
 
 
